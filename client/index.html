@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Material Design Bootstrap Template</title>
+
+    <!--RegIn's-->
+    <!-- Material Design Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/RegIn_bootstrap.min.css" rel="stylesheet">
+
+    <!-- Material Design Bootstrap -->
+    <link href="css/RegIn_mdb.css" rel="stylesheet">
+    <link href="css/RegIn_style.css" rel="stylesheet">
+    <!--RegIn's-->
+    <!--Hide&Show jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#regbtn").click(function () {
+                $("#welcome").hide();
+            });
+            $("#loginbtn").click(function () {
+                $("#welcome").hide();
+            });
+            $("#refreshbtn").click(function () {
+                $("#welcome").show();
+                $("#dview").hide();
+            });
+        });
+    </script>
+
+    <!--Hide&Show jquery-->
+
+</head>
+
+<body>
+
+    <!--Navigation-->
+    <nav class="navbar blue navbar-fixed-top z-depth-1" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand waves-effect waves-light" id="refreshbtn">Refresh Page</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <form class="navbar-form navbar-right" role="search">
+                    <div class="form-group waves-effect waves-light">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!--/.Navigation-->
+    <!-- Carousel -->
+    <div id="main-carousel" class="carousel slide carousel-fade carousel-bg" data-interval="false">
+        <!-- Indicators -->
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <!-- First slide -->
+            <div class="item active">
+                <!--Video-->
+                <div class="homepage-hero-module">
+                    <video autoplay loop class="fillWidth">
+                        <source src="http://mdbootstrap.com/images/video/Nature-Sunset.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                    </video>
+                </div>
+                <!--/.Video-->
+                <!--Caption-->
+                <div class="carousel-caption">
+                    <div class="verticalcenter">
+                        <div class="animated fadeInDown" id="welcome">
+                            <h4>Wanderlust</h4>
+                            <h5>Start your adventure, let us take you there</h5>
+                            <a id="regbtn" ui-sref='register' ui-sref-active="active" class="btn btn-primary btn-stc waves-effect waves-light" style="background-color:grey;">Register</a>
+                            <a id="loginbtn" ui-sref='login' ui-sref-active="active" class="btn btn-primary btn-etc waves-effect waves-light">Login</a>
+
+                        </div>
+                        <div class="animated fadeInDown">
+                            <main ui-view id="dview"></main>
+                        </div>
+                    </div>
+                </div>
+                <!--/.Caption-->
+            </div>
+            <!-- /.First slide -->
+        </div>
+        <!-- /.carousel-inner -->
+
+    </div>
+    <!-- /.Carousel -->
+    <!--RegIn's-->
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/RegIn_jquery.min.js"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/RegIn_bootstrap.min.js"></script>
+
+    <!-- Material Design Bootstrap -->
+    <script type="text/javascript" src="js/RegIn_mdb.js"></script>
+    <!--RegIn's-->
+
+
+    <script src="vendor/angular.js"></script>
+    <script src="vendor/angular-resource.js"></script>
+    <script src="vendor/angular-ui-router.js"></script>
+    <script src="js/services/lb-services.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/controller/auth.js"></script>
+    <script src="js/services/auth.js"></script>
+
+
+</body>
+
+</html>

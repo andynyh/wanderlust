@@ -1,0 +1,55 @@
+{
+  "name": "Wanderer",
+  "base": "User",
+  "strict": false,
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "username": {
+      "type": "string"
+    },
+    "givenName": {
+      "type": "string"
+    },
+    "surname": {
+      "type": "string"
+    },
+    "occupation": {
+      "type": "string"
+    },
+    "interests": {
+      "type": "string"
+    },
+    "gender": {
+      "type": "string"
+    },
+    "nationality": {
+      "type": "string"
+    },
+    "languages": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "password": {
+      "type": "string"
+    },
+    "dob": {
+      "type": "date"
+    },
+    "mobileNo": {
+      "type": "number"
+    },
+    "email": {
+      "type": "string",
+      "id": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

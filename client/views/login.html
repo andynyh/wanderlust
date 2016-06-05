@@ -1,0 +1,22 @@
+﻿<style>
+    input.ng-invalid.ng-dirty {
+        border: 1px solid red;
+    }
+</style>
+<section>
+    <form name="form" ng-submit="login()">
+        <div>
+            <input type="email" class="loginfields" name="email" ng-model="user.email" placeholder="Registered Email" required><br>
+            <span ng-show="form.email.$dirty && form.email.$error.required" style="color: red;">*</span>
+            <span ng-show="form.email.$dirty && form.email.$error.email" style="color: red;">Invalid email</span>
+        </div>
+        <div>
+            <input type="password" class="loginfields" name="password" ng-model="user.password" placeholder="Password" required ng-minlength="6" ng-maxlength="12"><br>
+            <span ng-show="form.password.$dirty && form.password.$error.required" style="color: red;">*</span>
+        </div>
+        <div>
+            <button ng-disabled="form.$invalid" class="btn btn-primary btn-etc waves-effect waves-light" style="width:350px; margin-top:20px;">Log In</button>
+        </div>
+    </form>
+    <a href="http://localhost:3000/#/register" style="color:lightgrey">Click to register</a>
+</section>
